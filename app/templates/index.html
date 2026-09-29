@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrestLine Assist</title>
+    <link rel="stylesheet" href="/static/style.css?v=3" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">CL</div>
+          <div class="brand-text">
+            <h1>CrestLine Assist</h1>
+            <p>Internal AI Assistant · CrestLine Financial Services</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="chat-panel" aria-label="Chat">
+        <div id="message-list" class="message-list">
+          <div class="message assistant">
+            <div class="message-meta">CrestLine Assist</div>
+            <div class="message-bubble">
+              Welcome. I can help with internal policies, IT questions,
+              compliance, security procedures, and general company information.
+            </div>
+          </div>
+        </div>
+
+        <div id="status-row" class="status-row" hidden>
+          <span class="spinner" aria-hidden="true"></span>
+          <span>CrestLine Assist is thinking…</span>
+        </div>
+        <p id="error-banner" class="error-banner" hidden></p>
+
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="message-input">Message</label>
+          <textarea
+            id="message-input"
+            name="message"
+            rows="1"
+            placeholder="Ask CrestLine Assist…"
+            autocomplete="off"
+            required
+          ></textarea>
+          <button id="send-button" type="submit">Send</button>
+        </form>
+      </main>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
