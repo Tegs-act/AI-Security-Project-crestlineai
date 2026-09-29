@@ -1,0 +1,40 @@
+This is the **exact toolkit** I'd use.
+
+## Core infrastructure
+
+|Tool|Role|
+|---|---|
+|Ubuntu|Lab OS|
+|Python 3.13|Application + automation|
+|Git|Version control|
+|GitHub|Repository + CI/CD|
+|VS Code|Development|
+|Docker|Reproducible services|
+
+---
+
+## AI stack
+
+|Tool|Role|
+|---|---|
+|**Ollama**|Local LLM runtime|
+|**Llama 3.2 3B**|Initial local model|
+|**ChromaDB**|Vector database / RAG|
+|FastAPI|CrestLine Assist API|
+
+---
+
+## Red-team stack
+
+| Tool          | Role                                     |
+| ------------- | ---------------------------------------- |
+| **Promptfoo** | Rapid automated red teaming + regression |
+| **Garak**     | LLM vulnerability scanning               |
+| **PyRIT**     | Adversarial orchestration + scoring      |
+| Custom Python | Your own attack/scoring engine           |
+
+Garak is specifically designed as an LLM vulnerability scanner and supports probes for areas including prompt injection, data leakage and jailbreaks. ([GitHub](https://github.com/NVIDIA/garak?utm_source=chatgpt.com "GitHub - NVIDIA/garak: the LLM vulnerability scanner · GitHub"))
+
+Promptfoo currently supports automated red teaming across many vulnerability categories and can test HTTP/API targets and integrate with CI/CD. ([GitHub](https://github.com/promptfoo/promptfoo/blob/main/site/docs/red-team/quickstart.md?utm_source=chatgpt.com "promptfoo/site/docs/red-team/quickstart.md at main · promptfoo/promptfoo · GitHub"))
+
+PyRIT provides targets, attack orchestration, conversation memory and flexible scoring, making it useful for the deeper assessment layer. ([GitHub](https://github.com/microsoft/PyRIT/blob/main/doc/index.md?utm_source=chatgpt.com "PyRIT/doc/index.md at main · microsoft/PyRIT · GitHub"))
